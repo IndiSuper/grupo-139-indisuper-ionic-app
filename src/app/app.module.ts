@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CategoriaPage } from '../pages/categoria/categoria';
 import { CategoriaPageModule } from '../pages/categoria/categoria.module';
+import { CursosPageModule } from '../pages/cursos/cursos.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -49,6 +50,7 @@ export class MyErrorHandler implements ErrorHandler {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     CategoriaPageModule,
+    CursosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
