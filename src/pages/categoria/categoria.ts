@@ -15,7 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CategoriaPage {
 
-subcateg: Array = this.navParams.get('subcateg');
+subcateg: Array<{imagen: string ,nombre: string}>;
+
+subcateg = this.navParams.get('subcateg');
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
