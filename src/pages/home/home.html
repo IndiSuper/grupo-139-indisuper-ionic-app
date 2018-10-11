@@ -1,0 +1,52 @@
+<ion-header  >
+  <ion-navbar color="primary" >
+    <button ion-button menuToggle class="fondomenu">
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header><br>
+<img class="logoindi" src="assets/img/indisuper.png"/>
+<ion-header style="margin-top: 56px;">
+  <ion-toolbar color="buscador">
+    <ion-searchbar (input)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content style="margin-top: 56px;" class="card-background-page">
+      <ion-title class="titlucatt">categoria</ion-title>
+    <ion-card>
+      <img src="assets/img/capacitacion.png" (click)="goCategoria(1)" />
+      <div class="card-title">Eventos</div>
+      <div class="card-subtitle">Culrurales,Artsitcios<br>Musicales y mucho màs</div>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/img/libro.png" (click)="goCategoria(2)"/>
+      <div class="card-title">Cursos</div>
+      <div class="card-subtitle">Deportes,Gatromonia,<br>tecnologia y mucho màs</div>
+    </ion-card>
+
+    <ion-card style="">
+      <img src="assets/img/capaci.png" (click)="goCategoria(3)"/>
+      <div class="card-title">Capacitaciones</div>
+      <div class="card-subtitle">Rama judicial,impuestos,<br>empresarilaes y mcuho màs</div>
+    </ion-card><br><br><br>
+  </ion-content>
+<ion-footer>
+  <ion-toolbar color="buscador" >
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <ion-title>
+            <p  style="font-size: 9px;">Copyright © 2019 FEDESOFT  <br> Todos los derechos reservados.</p>
+          </ion-title>
+        </ion-col>
+        <ion-col col-6>
+          <div class="foderfima">
+            <b>Informate,supetare y Divierte</b>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
