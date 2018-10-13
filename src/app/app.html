@@ -16,7 +16,7 @@
           </div>
     </div>
     <ion-list style="margin-top: 7%;">
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" class="headmenu" >
+      <button menuClose ion-item *ngFor="let p of pages" (click)="goEventos()" class="headmenu" >
           <ion-icon name="{{p.name}}" class="iconosmenu" ></ion-icon> {{p.title}}
       </button>
       <hr class="separador">

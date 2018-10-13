@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EventosPage } from '../eventos/eventos';
 
 /**
- * Generated class for the CursosPage page.
+ * Generated class for the InfcursoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,24 +10,16 @@ import { EventosPage } from '../eventos/eventos';
 
 @IonicPage()
 @Component({
-  selector: 'page-cursos',
-  templateUrl: 'cursos.html',
+  selector: 'page-infcurso',
+  templateUrl: 'infcurso.html',
 })
-export class CursosPage {
+export class InfcursoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    // console.log('ionViewDidLoad CursosPage');
+    console.log('ionViewDidLoad InfcursoPage');
   }
-
-  goBack():void{
-    this.navCtrl.pop();
-  }
-  goEventos():void{
-    this.navCtrl.push(EventosPage);
-  }
-
 
 }

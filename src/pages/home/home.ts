@@ -1,6 +1,12 @@
-import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { Nav,NavController,NavParams,Platform } from 'ionic-angular';
 import { CategoriaPage } from '../categoria/categoria';
+import { CapacitacionesPage } from '../capacitaciones/capacitaciones';
+import { CursosPage } from '../cursos/cursos';
+import { EventosPage } from '../eventos/eventos';
+import { VideoPlayer } from '@ionic-native/video-player';
 
 @Component({
   selector: 'page-home',
@@ -8,37 +14,30 @@ import { CategoriaPage } from '../categoria/categoria';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController,public navParams: NavParams) {
+  constructor(public platform: Platform,public navCtrl: NavController,public navParams: NavParams) {
 
   }
-  subcateg: Array<{imagen: string ,nombre: string}>;
+
+  subcateg: Array<{imagen: string ,nombre: string ,component: any}>;
 
   goCategoria(subca):void{
     switch(subca) {
        case 1: {
          this.subcateg = [
-           { imagen:'teatro.jpg', nombre: 'Teatro'},
-           { imagen:'concierto.jpg', nombre: 'Conciertos'},
-           { imagen:'fiestas.jpg', nombre: 'Ferias - fiestas'},
-           { imagen:'stand-up-comedy.jpg', nombre: 'Cuenteros'}
+           { imagen:'teatro.jpg', nombre: 'Teatro',component:EventosPage },
+           { imagen:'concierto.jpg', nombre: 'Conciertos',component: EventosPage},
+           { imagen:'fiestas.jpg', nombre: 'Ferias - fiestas',component:EventosPage},
+           { imagen:'stand-up-comedy.jpg', nombre: 'Cuenteros',component:EventosPage}
          ];
           // console.log("ingresio 1" + this.subcateg[0].imagen);
           break;
        }
        case 2: {
          this.subcateg = [
-           { imagen:'deportes.jpg', nombre: 'Deportes'},
-           { imagen:'gastro.jpg', nombre: 'Gastronomia'},
-           { imagen:'tecnologia.jpg', nombre: 'Tecnologia'},
-           { imagen:'arte.jpg', nombre: 'Arte'}
-         ];
-            // console.log("ingresio 2");
-          break;
-       }
-       case 3: {
-         this.subcateg = [
-           { imagen:'capdian.jpg', nombre: 'Sistema DIAN'},
-           { imagen:'ley4.jpg', nombre: 'Ley 1793'}
+           { imagen:'deportes.jpg', nombre: 'Deportes',component:CursosPage},
+           { imagen:'gastro.jpg', nombre: 'Gastronomia',component:CursosPage},
+           { imagen:'tecnologia.jpg', nombre: 'Tecnologia',component:CursosPage},
+           { imagen:'arte.jpg', nombre: 'Arte',component:CursosPage}
          ];
             // console.log("ingresio 2");
           break;
@@ -50,6 +49,12 @@ export class HomePage {
     }
     this.navCtrl.push(CategoriaPage,{'subcateg' : this.subcateg});
     // this.navCtrl.push(CategoriaPage,this.subcateg);
+  }
+  goCapacitaciones():void{
+    this.navCtrl.push(CapacitacionesPage);
+  }
+  goEventos():void{
+    this.navCtrl.push(EventosPage);
   }
 //   initializeItems() {
 //   this.items = [
@@ -74,5 +79,4 @@ export class HomePage {
 //     })
 //   }
 // }
-
 }

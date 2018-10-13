@@ -14,7 +14,7 @@
 
   <ion-content style="margin-top: 56px;">
       <ion-title class="titlucatt">subcategoria</ion-title>
-      <ion-card *ngFor="let sbc of subcateg" (click)="goCursos()"  >
+      <ion-card *ngFor="let sbc of subcateg" (click)="openPage(sbc)"  >
           <img class="subimg" src="assets/img/{{sbc.imagen}}"/>
           <ion-card-content>
             <hr class="separasub">

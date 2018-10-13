@@ -176,6 +176,23 @@ $colors: (
   color: #0083ae;
 }
 
+.btnisncri{
+  background-color: #0083ae!important;
+  padding: 10px!important;
+  font-weight: 500!important;
+  font-size: 12px!important;
+}
+.btninccur{
+  background: #fffdfd;
+  padding: 12px!important;
+  border: 1px solid!important;
+}
+
+.videoev{
+  display: block;
+  width: 100%;
+  height: 198px;
+}
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
