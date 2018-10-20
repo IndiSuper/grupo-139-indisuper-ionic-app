@@ -11,6 +11,7 @@ import { CategoriaPageModule } from '../pages/categoria/categoria.module';
 import { CursosPageModule } from '../pages/cursos/cursos.module';
 import { CapacitacionesPageModule } from '../pages/capacitaciones/capacitaciones.module';
 import { EventosPageModule } from '../pages/eventos/eventos.module';
+import { InfcursoPageModule } from '../pages/infcurso/infcurso.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -55,6 +56,7 @@ export class MyErrorHandler implements ErrorHandler {
     CursosPageModule,
     CapacitacionesPageModule,
     EventosPageModule,
+    InfcursoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

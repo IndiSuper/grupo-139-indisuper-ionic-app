@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { EventosPage } from '../eventos/eventos';
+import { InfcursoPage } from '../infcurso/infcurso';
 
 /**
  * Generated class for the CursosPage page.
@@ -28,6 +29,9 @@ export class CursosPage {
   }
   goEventos():void{
     this.navCtrl.push(EventosPage);
+  }
+  goInfcurso():void{
+    this.navCtrl.push(InfcursoPage);
   }
 
 
