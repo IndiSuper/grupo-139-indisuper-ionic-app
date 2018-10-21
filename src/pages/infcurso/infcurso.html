@@ -20,7 +20,7 @@
             <p style="font-size: 12px;" ><b style="font-size: 15px;">Curso postres</b> <br> Fundamnetos </p>  
           </ion-col>
           <ion-col col-6>
-              <p class="paplicar" > <a href="#">Aplicar</a> </p>
+              <p class="paplicar" > <a href="#" (click)="doConfirm()">Aplicar</a> </p>
           </ion-col>
       </ion-row>
     </ion-title>
@@ -31,14 +31,24 @@
       estrategias propias de aquellos profesionales que se desempeñan como Gastronomía .
     </p>
     <hr class="sepdescurso" >
-    <p>
+    <p class="descripcurso">
       <b>Duración:</b> 21/08/2018 - 30/06/18 40 horas <br>
-      <b>Ofrece:</b> Alcalde
-      <b>Duración:</b>
-      <b>Duración:</b>
-      <b>Duración:</b>
-      <b>Duración:</b>
+      <b>Ofrece:</b> Alcalde Mintic <br>
+      <b>Lugar:</b> carrera 91 # 75-06 Bogotá Suba <br>
+      <b>Horario:</b> L-V (2:00 p.m. - 4:00 p.m.) <br>
+      <b>Contacto:</b> 315 111 111 <br>
+      <b>Formador/capacitador:</b> James Duran <br>
     </p>
+</div>
+<div class="titulocurso divrequisitos">
+   <ion-row>
+    <ion-col col-6>
+          <button ion-button color="buscador" outline icon-start style="font-size: 15px;" (click)="presentModal()" > <ion-icon class="iconoreque" name="checkbox-outline"></ion-icon> Requisitos</button> 
+    </ion-col>
+    <ion-col col-6>
+
+    </ion-col>
+   </ion-row> 
 </div>
 
 </ion-content>

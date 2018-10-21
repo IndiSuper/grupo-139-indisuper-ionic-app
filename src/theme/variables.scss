@@ -40,7 +40,8 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   buscador:   #09172f,
-  favorito:  #0f60ff
+  favorito:  #0f60ff,
+  verdeos: #0b6124
 );
 
 .headmenu{
@@ -228,8 +229,8 @@ $colors: (
 }
 
 .descripcurso{
-    padding-right: 12px !important;
-    padding-left: 12px !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
     text-align: justify;
 }
 .paplicar{
@@ -237,6 +238,45 @@ $colors: (
     text-align: right!important;
     margin-right: 10px!important;
 }
+
+.divrequisitos{
+  height: 67px!important;
+}
+
+.iconoreque{
+    font-size: 19px!important;
+    margin-top: 8px!important;
+    margin-bottom: 9px!important;
+    // margin-left: 12px!important;
+    margin-right: 5px!important;
+    font-weight: 600!important;
+    color: #0b6124!important;
+}
+.segment-button.segment-activated {
+  border-color: #58a0e6;
+  background: #09172f!important;
+  color: #f4f4f4!important;
+  font-weight: 700!important;
+  opacity: 1;
+}
+
+.divincri{
+    padding: 25px;
+    text-align: center;
+}
+
+.divreqinc{
+  padding-left: 11px;
+  padding-right: 14px;
+  text-align: justify;
+}
+
+.btn-confirmar{
+    border-radius: 18px!important;
+    height: 28px!important;
+    margin-right: 13px!important;
+}
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

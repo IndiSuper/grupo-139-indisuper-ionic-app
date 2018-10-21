@@ -1,8 +1,7 @@
 import { Pro } from '@ionic/pro';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule, Injectable, Injector } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { IonicApp, IonicErrorHandler, IonicModule ,ModalController } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -12,6 +11,12 @@ import { CursosPageModule } from '../pages/cursos/cursos.module';
 import { CapacitacionesPageModule } from '../pages/capacitaciones/capacitaciones.module';
 import { EventosPageModule } from '../pages/eventos/eventos.module';
 import { InfcursoPageModule } from '../pages/infcurso/infcurso.module';
+import { RequisitosPageModule } from '../pages/requisitos/requisitos.module';
+import { MconfimacionaPageModule } from '../pages/mconfimaciona/mconfimaciona.module';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -56,7 +61,9 @@ export class MyErrorHandler implements ErrorHandler {
     CursosPageModule,
     CapacitacionesPageModule,
     EventosPageModule,
-    InfcursoPageModule
+    InfcursoPageModule,
+    RequisitosPageModule,
+    MconfimacionaPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,7 +75,10 @@ export class MyErrorHandler implements ErrorHandler {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FileTransfer,
+    FileTransferObject,
+    File
   ]
 })
 export class AppModule {}
