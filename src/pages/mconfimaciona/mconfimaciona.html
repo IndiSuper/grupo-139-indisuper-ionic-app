@@ -52,33 +52,21 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'Requisitos'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-1.jpg">
-        </ion-thumbnail>
-        <h2>Luna</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-3.jpg">
-        </ion-thumbnail>
-        <h2>Milo</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-4.jpg">
-        </ion-thumbnail>
-        <h2>Bandit</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-2.jpg">
-        </ion-thumbnail>
-        <h2>Nala</h2>
-      </ion-item>
-      <ion-item>
-          <button ion-button >Upload</button>
-        </ion-item>
+        <div class="divincri">
+            <ion-title>
+                Soporte de Requisitos            
+            </ion-title>
+            <hr class="sepdescurso">
+            <ion-item>
+                <button ion-button >Upload</button>
+              </ion-item>
+            <hr class="sepdescurso">
+            <p style="text-align: right;" >
+                <button ion-button color="primary" (click)="goiscripcion()" class="btn-confirmar" >Finalizar</button>
+            </p>      
+          </div>       
+       
+
     </ion-list>
   </div>
 </ion-content>

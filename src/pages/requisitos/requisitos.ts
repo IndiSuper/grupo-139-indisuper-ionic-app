@@ -15,7 +15,8 @@ import { Platform,IonicPage, NavController, NavParams ,ViewController} from 'ion
 })
 export class RequisitosPage {
 
-  constructor( public platform: Platform,public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController) {
+  constructor( public platform: Platform,public navCtrl: NavController, public navParams: NavParams,
+    public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {

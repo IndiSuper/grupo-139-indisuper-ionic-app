@@ -13,11 +13,11 @@ import { EventosPageModule } from '../pages/eventos/eventos.module';
 import { InfcursoPageModule } from '../pages/infcurso/infcurso.module';
 import { RequisitosPageModule } from '../pages/requisitos/requisitos.module';
 import { MconfimacionaPageModule } from '../pages/mconfimaciona/mconfimaciona.module';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { MiscursosPageModule } from '../pages/miscursos/miscursos.module';
+import { CusrorealPageModule } from '../pages/cusroreal/cusroreal.module';
+
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
-
-
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -63,7 +63,9 @@ export class MyErrorHandler implements ErrorHandler {
     EventosPageModule,
     InfcursoPageModule,
     RequisitosPageModule,
-    MconfimacionaPageModule
+    MconfimacionaPageModule,
+    MiscursosPageModule,
+    CusrorealPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -77,7 +79,6 @@ export class MyErrorHandler implements ErrorHandler {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FileTransfer,
-    FileTransferObject,
     File
   ]
 })

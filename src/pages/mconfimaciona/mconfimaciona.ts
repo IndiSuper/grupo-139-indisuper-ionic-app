@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams ,ViewController,Platform} from 'ionic-angular';
+import { IonicPage,AlertController, NavController, NavParams ,ViewController,Platform} from 'ionic-angular';
 
 /**
  * Generated class for the MconfimacionaPage page.
@@ -19,7 +19,8 @@ export class MconfimacionaPage {
   private isDisabledr: boolean=true;
   private isDisabledc: boolean=false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController,public platform: Platform) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController,
+    public platform: Platform,public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -35,6 +36,16 @@ export class MconfimacionaPage {
 
   dismiss() {
     this.viewCtrl.dismiss();
+  }
+
+  goiscripcion(){
+    const alert = this.alertCtrl.create({
+      title: 'Felicitaciones',
+      subTitle: 'Se ha inscrito al curso Postres',
+      buttons: ['OK']
+    });
+    alert.present();
+    this.dismiss();
   }
   
 

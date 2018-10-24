@@ -6,7 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { ModalController } from 'ionic-angular';
 import { ListPage } from '../pages/list/list';
 import { CategoriaPage } from '../pages/categoria/categoria';
-import { CursosPage } from '../pages/cursos/cursos';
+import { MiscursosPage } from '../pages/miscursos/miscursos';
 
 @Component({
   templateUrl: 'app.html',
@@ -27,7 +27,7 @@ export class MyApp {
       { name:'home', title: 'Inicio', component: HomePage },
       { name:'checkmark', title: 'Confirmar Asistencia', component: HomePage },
       { name:'star',title: 'Destacados', component: CategoriaPage },
-      { name:'folder',title: 'Mis cursos y eventos', component: ListPage },
+      { name:'folder',title: 'Mis cursos y eventos', component: MiscursosPage },
       { name:'chatbubbles',title: 'Horario', component: ListPage },
       { name:'calendar',title: 'Contactenos', component: ListPage },
       { name:'help',title: 'Ayuda', component: ListPage }

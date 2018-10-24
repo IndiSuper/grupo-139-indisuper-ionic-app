@@ -41,7 +41,9 @@ $colors: (
   dark:       #222,
   buscador:   #09172f,
   favorito:  #0f60ff,
-  verdeos: #0b6124
+  verdeos: #0b6124,
+  amarillo: #c5c409, 
+  indisuper: #0083ae
 );
 
 .headmenu{
@@ -253,10 +255,9 @@ $colors: (
     color: #0b6124!important;
 }
 .segment-button.segment-activated {
-  border-color: #58a0e6;
-  background: #09172f!important;
-  color: #f4f4f4!important;
   font-weight: 700!important;
+  color: #09172f!important;
+  border-color: #09172f!important;
   opacity: 1;
 }
 
@@ -276,6 +277,40 @@ $colors: (
     height: 28px!important;
     margin-right: 13px!important;
 }
+.btn-estadosmis{
+  font-size: 10px!important;
+  border-radius: 7px!important;
+  height: 22px!important;
+  text-transform: capitalize!important;
+}
+
+.divinfocurp2 {
+  background: #0083ae;
+  color: bisque;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  font-size: 23px;
+  top: 160px;
+}
+
+.divinforeal{
+  line-height: 17px;
+  padding: 9px;
+}
+
+.checasiste{
+    color: #28de49!important;
+    font-size: 24px!important;
+    font-weight: 700!important;
+}
+.closeassite{
+  color: #f53d3d!important;
+  font-size: 24px!important;
+  font-weight: 700!important;
+}
+
+
 
 // App iOS Variables
 // --------------------------------------------------
