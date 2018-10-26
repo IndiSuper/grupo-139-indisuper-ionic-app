@@ -15,11 +15,22 @@ import { RequisitosPageModule } from '../pages/requisitos/requisitos.module';
 import { MconfimacionaPageModule } from '../pages/mconfimaciona/mconfimaciona.module';
 import { MiscursosPageModule } from '../pages/miscursos/miscursos.module';
 import { CusrorealPageModule } from '../pages/cusroreal/cusroreal.module';
+import { ModaleventocapaPageModule} from '../pages/modaleventocapa/modaleventocapa.module';
+import { QrasistenciaPageModule} from '../pages/qrasistencia/qrasistencia.module';
+import { DestacadosPageModule} from '../pages/destacados/destacados.module';
+
+
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http';
+import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { MyservicesProvider } from '../providers/myservices/myservices';
 
 Pro.init('4b3a73a3', {
   appVersion: '1.0'
@@ -65,7 +76,11 @@ export class MyErrorHandler implements ErrorHandler {
     RequisitosPageModule,
     MconfimacionaPageModule,
     MiscursosPageModule,
-    CusrorealPageModule
+    CusrorealPageModule,
+    ModaleventocapaPageModule,
+    QrasistenciaPageModule,
+    DestacadosPageModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -79,7 +94,11 @@ export class MyErrorHandler implements ErrorHandler {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FileTransfer,
-    File
+    File,
+    QRScanner,
+    AndroidPermissions,
+    MyservicesProvider,
+    HttpClient
   ]
 })
 export class AppModule {}

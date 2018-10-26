@@ -7,6 +7,10 @@ import { ModalController } from 'ionic-angular';
 import { ListPage } from '../pages/list/list';
 import { CategoriaPage } from '../pages/categoria/categoria';
 import { MiscursosPage } from '../pages/miscursos/miscursos';
+import { QrasistenciaPage } from '../pages/qrasistencia/qrasistencia';
+import { DestacadosPage } from '../pages/destacados/destacados';
+
+
 
 @Component({
   templateUrl: 'app.html',
@@ -25,8 +29,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { name:'home', title: 'Inicio', component: HomePage },
-      { name:'checkmark', title: 'Confirmar Asistencia', component: HomePage },
-      { name:'star',title: 'Destacados', component: CategoriaPage },
+      { name:'checkmark', title: 'Confirmar Asistencia', component: QrasistenciaPage },
+      { name:'star',title: 'Destacados', component: DestacadosPage },
       { name:'folder',title: 'Mis cursos y eventos', component: MiscursosPage },
       { name:'chatbubbles',title: 'Horario', component: ListPage },
       { name:'calendar',title: 'Contactenos', component: ListPage },

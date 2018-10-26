@@ -50,22 +50,23 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'Sesiones'">
-        <ion-fab right top>
-            <button ion-fab color="indisuper" (click)="goHome()"><ion-icon name="add"></ion-icon></button>
-          </ion-fab>
-        <ion-list>
+        <ion-fab right style="margin-right: -13px!important;">
+            <button ion-button color="indisuper" clear><ion-icon style="font-size: 29px;" name="calendar"></ion-icon></button>
+        </ion-fab><br>
+        <ion-list class="div-padicurso">
             <button ion-item style="border-bottom: 1px solid #f4f4f4;" >
               <ion-icon style="color: #bdbdbd;" name="book" item-start></ion-icon> Pimera Sesión
-              <p> Lunes 23/06/18 4:00 pm </p>             
+              <p> Lunes 23/06/18 <br>
+                 4:00 pm </p>             
               <div class="item-note" item-end>    
                   <ion-icon class="checasiste" name="checkmark-circle"></ion-icon>      
               </div>
             </button>
           </ion-list>
-          <ion-list>
+          <ion-list class="div-padicurso">
               <button ion-item style="border-bottom: 1px solid #f4f4f4;" >
                 <ion-icon style="color: #bdbdbd;" name="book" item-start></ion-icon> Pimera Sesión
-                <p> Lunes 23/06/18 4:00 pm </p>             
+                <p> Lunes 23/06/18 <br> 4:00 pm </p>             
                 <div class="item-note" item-end>    
                     <ion-icon class="closeassite" name="close-circle"></ion-icon>      
                 </div>
@@ -74,30 +75,15 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'Contenido'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-1.jpg">
-        </ion-thumbnail>
-        <h2>Daffy</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-2.jpg">
-        </ion-thumbnail>
-        <h2>Huey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-3.jpg">
-        </ion-thumbnail>
-        <h2>Dewey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-4.jpg">
-        </ion-thumbnail>
-        <h2>Louie</h2>
-      </ion-item>
+      <ion-item-group>
+        <ion-item-divider color="light"> <b>Tema 1</b> </ion-item-divider>
+        <ion-item>Actividad A
+          <p>Descrip sss dd rerwewe sdsd </p>
+        </ion-item>
+        <ion-item>Actividad B
+          <p>Descrip sss dd rerwewe sdsd </p>
+        </ion-item>
+      </ion-item-group>  
     </ion-list>
   </div>
 

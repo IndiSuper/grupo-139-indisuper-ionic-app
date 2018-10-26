@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ModalController ,AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { CusrorealPage } from '../cusroreal/cusroreal';
+import { ModaleventocapaPage } from '../modaleventocapa/modaleventocapa';
 
 
 /**
@@ -18,7 +20,7 @@ import { CusrorealPage } from '../cusroreal/cusroreal';
 })
 export class MiscursosPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -31,5 +33,10 @@ export class MiscursosPage {
   
   goCursoreal(){
     this.navCtrl.push(CusrorealPage);
+  }
+
+  presentModalEvento() {
+    let modal = this.modalCtrl.create(ModaleventocapaPage);
+    modal.present();
   }
 }

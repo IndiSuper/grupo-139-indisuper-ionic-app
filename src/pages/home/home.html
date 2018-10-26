@@ -31,6 +31,17 @@
       <div class="card-title">Capacitaciones</div>
       <div class="card-subtitle">Rama judicial,impuestos,<br>empresarilaes y mcuho màs</div>
     </ion-card><br><br><br>
+    <ion-card *ngFor="let pet of listPets">
+      <ion-card-header>
+        {{ pet.name }}, {{ pet.lname }}
+      </ion-card-header>
+      <ion-card-content>
+        <h4>Esta es raza</h4>
+        {{ pet.race }}
+      </ion-card-content>
+    </ion-card>
+     <button ion-button full (click)="getPets()">Traer Datos</button>
+    
   </ion-content>
 <ion-footer>
   <ion-toolbar color="buscador" >

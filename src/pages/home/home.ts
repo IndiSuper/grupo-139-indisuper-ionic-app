@@ -7,6 +7,7 @@ import { CapacitacionesPage } from '../capacitaciones/capacitaciones';
 import { CursosPage } from '../cursos/cursos';
 import { EventosPage } from '../eventos/eventos';
 import { VideoPlayer } from '@ionic-native/video-player';
+import { MyservicesProvider } from '../../providers/myservices/myservices' 
 
 @Component({
   selector: 'page-home',
@@ -14,7 +15,7 @@ import { VideoPlayer } from '@ionic-native/video-player';
 })
 export class HomePage {
 
-  constructor(public platform: Platform,public navCtrl: NavController,public navParams: NavParams) {
+  constructor(public platform: Platform,public navCtrl: NavController,public navParams: NavParams, public rest: MyservicesProvider) {
 
   }
 
@@ -55,6 +56,13 @@ export class HomePage {
   }
   goEventos():void{
     this.navCtrl.push(EventosPage);
+  }
+  
+  listPets: any;
+   getPets(){
+    this.rest.getPets().subscribe((respuesta) =>{
+      this.listPets = respuesta;
+    });
   }
 //   initializeItems() {
 //   this.items = [
