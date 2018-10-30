@@ -27,10 +27,39 @@ export class HomePage {
 
   }
 
-  listSubCategoria: any;  //array para listar las subcategorias
+  listSubcategoriaEventos: any; //array almacenar los id_subcategorias que pertenecen a EVENTOS
+  listSubcategoriaCursos: any; //array almacenar los id_subcategorias que pertenecen a CURSOS
 
-  getSubCategoria(){   //metodo para traer las SubCategorias
-    this.rest.getSubCategoria().subscribe((respuesta) =>{
+  listSubcategorias: any; //Array que almacena las subcategias depende si es Eventos o Cursos
+
+  getSubcategoriaEventos(){   //metodo para traer las SubCategorias que pertenecen a EVENTOS
+    this.rest.getSubcategoriaEventos().subscribe((respuesta) =>{
+      this.listSubcategoriaEventos = respuesta;
+    });
+  }
+
+  getSubcategoriaCursos(){   //metodo para traer las SubCategorias que pertenecen a CURSOS
+    this.rest.getSubcategoriaCursos().subscribe((respuesta) =>{
+      this.listSubcategoriaCursos = respuesta;
+    });
+  }
+
+  getSubcategoria(){
+
+  }
+
+/*
+  getSubcategoriaEventos(){   //metodo para traer las SubCategorias que pertenecen a EVENTOS
+    this.rest.getSubcategoriaEventos().subscribe((respuesta) =>{
+      this.listSubcategoriaEventos = respuesta;
+    });
+    this.navCtrl.push(CategoriaPage,{'subcateg' : this.listSubCategoria}); //Voy a las subcategorias de EVENTOS
+  }
+  */
+  listSubCategoria: any;  //array que almacena las subcategorias
+
+  getSubcategorias(){   //metodo para traer las SubCategorias
+    this.rest.getSubcategorias().subscribe((respuesta) =>{
       this.listSubCategoria = respuesta;
     });
     this.navCtrl.push(CategoriaPage,{'subcateg' : this.listSubCategoria});
@@ -49,8 +78,6 @@ export class HomePage {
   subcateg: Array<{imagen: string ,nombre: string ,component: any}>;
 
 
-
-//Aquí es donde uso lo de las SUBCATEGORIAS
    goCategoria(subca):void{
        this.getConsultarCategoria();
         console.log(this.listCategoria);

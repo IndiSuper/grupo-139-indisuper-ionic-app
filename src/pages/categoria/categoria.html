@@ -19,17 +19,16 @@
   <ion-title class="titlucatt">Subcategorias</ion-title>  <!--titulo de la página-->
 
 <!--Todas las sub-categorias -->
-  <ion-card *ngFor="let sbc of listSubCategoria" (click)="openPage()">
-      <img class="subimg" src="assets/img/{{sbc.rutaImagen}}"/>
+  <ion-card *ngFor="let sbc of listSubCategorias" (click)="openPage()">
+      <img class="subimg" src="assets/img/{{sbc.fotoSubcategoria}}"/>
     <ion-card-content>
 
       <hr class="separasub">
       <ion-card-title class="subcatextti" >
-          {{sbc.nombreSubCategoria}}
+          {{sbc.nombreSubcategoria}}
         </ion-card-title>
     </ion-card-content>
 </ion-card>
-
 
 <br><br><br>
 </ion-content>

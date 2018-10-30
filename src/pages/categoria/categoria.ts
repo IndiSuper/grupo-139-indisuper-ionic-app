@@ -19,7 +19,7 @@ export class CategoriaPage {
   subcateg: Array<{imagen: string ,nombre: string ,component: any}>;
   listCategoria: any;
 
-  listSubCategoria: any;  //defino la lista de subcategorias
+  listSubCategorias: any;  //defino la lista de subcategorias
 
 
   constructor(
@@ -27,7 +27,7 @@ export class CategoriaPage {
     public navCtrl: NavController,
     public navParams: NavParams) {
 
-    this.listSubCategoria=this.navParams.get('subcateg');
+    this.listSubCategorias=this.navParams.get('subcateg');
     //Aquí, creo, paso las subcategorias que traje en home.ts de la api, creo
 
   }
