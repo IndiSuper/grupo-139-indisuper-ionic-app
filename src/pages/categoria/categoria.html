@@ -12,19 +12,31 @@
   </ion-toolbar>
 </ion-header>
 
-  <ion-content style="margin-top: 56px;">
-      <ion-title class="titlucatt">subcategoria</ion-title>
-      <ion-card *ngFor="let sbc of subcateg" (click)="openPage(sbc)"  >
-          <img class="subimg" src="assets/img/{{sbc.imagen}}"/>
-          <ion-card-content>
-            <hr class="separasub">
-            <ion-card-title class="subcatextti" >
-                {{sbc.nombre}}
-              </ion-card-title>
-          </ion-card-content>
-      </ion-card>
-      <br><br><br>
-  </ion-content>
+
+
+<!-- contenido -->
+<ion-content style="margin-top: 56px;">
+  <ion-title class="titlucatt">Subcategorias</ion-title>  <!--titulo de la página-->
+
+<!--Todas las sub-categorias -->
+  <ion-card *ngFor="let sbc of listSubCategoria" (click)="openPage()">
+      <img class="subimg" src="assets/img/{{sbc.rutaImagen}}"/>
+    <ion-card-content>
+
+      <hr class="separasub">
+      <ion-card-title class="subcatextti" >
+          {{sbc.nombreSubCategoria}}
+        </ion-card-title>
+    </ion-card-content>
+</ion-card>
+
+
+<br><br><br>
+</ion-content>
+
+
+
+<!--Pie de página -->
 <ion-footer>
   <ion-toolbar color="buscador" >
     <ion-grid>

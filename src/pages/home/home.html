@@ -12,10 +12,14 @@
   </ion-toolbar>
 </ion-header> -->
 
+
+
   <ion-content style="margin-top: 6px;" class="card-background-page">
       <ion-title class="titlucatt">categoria</ion-title>
+
+
     <ion-card>
-      <img src="assets/img/capacitacion.png" (click)="goCategoria(1)" />
+      <img src="assets/img/capacitacion.png" (click)="getSubCategoria()" />
       <div class="card-title">Eventos</div>
       <div class="card-subtitle">Culrurales,Artsitcios<br>Musicales y mucho màs</div>
     </ion-card>
@@ -30,19 +34,15 @@
       <img src="assets/img/capaci.png" (click)="goCapacitaciones()"/>
       <div class="card-title">Capacitaciones</div>
       <div class="card-subtitle">Rama judicial,impuestos,<br>empresarilaes y mcuho màs</div>
-    </ion-card><br><br><br>
-    <ion-card *ngFor="let pet of listPets">
-      <ion-card-header>
-        {{ pet.name }}, {{ pet.lname }}
-      </ion-card-header>
-      <ion-card-content>
-        <h4>Esta es raza</h4>
-        {{ pet.race }}
-      </ion-card-content>
     </ion-card>
-     <button ion-button full (click)="getPets()">Traer Datos</button>
-    
+
+
   </ion-content>
+
+
+
+
+
 <ion-footer>
   <ion-toolbar color="buscador" >
     <ion-grid>

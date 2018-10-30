@@ -1,3 +1,4 @@
+
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
@@ -314,6 +315,42 @@ $colors: (
   padding-right: 38px!important;
 }
 
+.contactss{
+  margin-bottom: 35px!important;
+  margin-top:27px!important;
+  text-align: center;
+}
+
+
+.rayaform{
+  border-bottom: 1px solid #2223;
+}
+
+.horariotable{
+    box-shadow: 6px 6px 21px 0px rgba(184,184,184,1)!important;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    color: #fbfbfb;
+    font-size: xx-small;
+    font-weight: 700;
+    line-height: 11px;
+    border-radius: 3px;
+    padding-left: 6px;
+    text-align: center;
+    padding-right: 6px;
+
+}
+
+.col-horario{
+  min-width: 78px!important;
+  text-align: center!important;
+  display: table-cell!important;
+  height: 39px !important;
+  vertical-align: middle!important;
+  font-size: small!important;
+  font-weight: 600!important;
+  
+}
 
 // App iOS Variables
 // --------------------------------------------------

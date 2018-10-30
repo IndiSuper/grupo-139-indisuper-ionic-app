@@ -1,3 +1,4 @@
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -9,6 +10,10 @@ import { CategoriaPage } from '../pages/categoria/categoria';
 import { MiscursosPage } from '../pages/miscursos/miscursos';
 import { QrasistenciaPage } from '../pages/qrasistencia/qrasistencia';
 import { DestacadosPage } from '../pages/destacados/destacados';
+import { ContactenosPage } from '../pages/contactenos/contactenos';
+import { HorarioPage } from '../pages/horario/horario';
+import { RegistroPage } from '../pages/registro/registro';
+import { PerfilPage } from '../pages/perfil/perfil';
 
 
 
@@ -32,9 +37,10 @@ export class MyApp {
       { name:'checkmark', title: 'Confirmar Asistencia', component: QrasistenciaPage },
       { name:'star',title: 'Destacados', component: DestacadosPage },
       { name:'folder',title: 'Mis cursos y eventos', component: MiscursosPage },
-      { name:'chatbubbles',title: 'Horario', component: ListPage },
-      { name:'calendar',title: 'Contactenos', component: ListPage },
-      { name:'help',title: 'Ayuda', component: ListPage }
+      { name:'folder',title: 'perfil y eventos', component: PerfilPage },
+      { name:'chatbubbles',title: 'Horario', component: HorarioPage },
+      { name:'calendar',title: 'Contactenos', component: ContactenosPage },
+      { name:'help',title: 'Ayuda', component: RegistroPage }
     ];
 
   }

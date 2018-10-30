@@ -19,10 +19,16 @@ import { ModaleventocapaPageModule} from '../pages/modaleventocapa/modaleventoca
 import { QrasistenciaPageModule} from '../pages/qrasistencia/qrasistencia.module';
 import { DestacadosPageModule} from '../pages/destacados/destacados.module';
 
+import { ContactenosPageModule } from '../pages/contactenos/contactenos.module';
+import { HorarioPageModule } from '../pages/horario/horario.module';
+import { RegistroPageModule } from '../pages/registro/registro.module';
+import { PerfilPageModule } from '../pages/perfil/perfil.module';
+
+import { InfPerfilPageModule } from '../pages/inf-perfil/inf-perfil.module';
+import { EditarPPageModule } from '../pages/editar-p/editar-p.module';
 
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HTTP } from '@ionic-native/http';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
@@ -30,6 +36,9 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+//Modulos para consumir los servicios API :)
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyservicesProvider } from '../providers/myservices/myservices';
 
 Pro.init('4b3a73a3', {
@@ -80,7 +89,13 @@ export class MyErrorHandler implements ErrorHandler {
     ModaleventocapaPageModule,
     QrasistenciaPageModule,
     DestacadosPageModule,
-    HttpClientModule
+    HttpClientModule,  //modulo importado para consumor api
+    ContactenosPageModule,
+    HorarioPageModule,
+    RegistroPageModule,
+    PerfilPageModule,
+    InfPerfilPageModule,
+    EditarPPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -97,8 +112,8 @@ export class MyErrorHandler implements ErrorHandler {
     File,
     QRScanner,
     AndroidPermissions,
-    MyservicesProvider,
-    HttpClient
+    MyservicesProvider,  //proveor de api
+    HttpClient   //provedor para api
   ]
 })
 export class AppModule {}
