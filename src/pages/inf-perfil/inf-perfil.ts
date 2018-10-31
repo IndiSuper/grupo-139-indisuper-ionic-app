@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the InfPerfilPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+import { MyservicesProvider } from '../../providers/myservices/myservices'
 
 @IonicPage()
 @Component({
@@ -15,11 +11,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class InfPerfilPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public rest: MyservicesProvider
+  ) {
+
   }
+
+  infoPerfil: any;
+
+  getUsuario(){
+    this.rest.getUsuario().subscribe((respuesta) => {
+      this.infoPerfil = respuesta;
+    });
+  }
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InfPerfilPage');
   }
+
+
 
 }

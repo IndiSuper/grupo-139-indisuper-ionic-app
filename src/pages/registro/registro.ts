@@ -15,6 +15,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RegistroPage {
 
+  postData = {
+
+  "fotoUsuario": "",
+  "numIdentificacion": 0,
+  "nombreUsuario": "",
+  "apellidoUsuario": "",
+  "fechaNac": "",
+  "fechaExpc": "",
+  "genero": "",
+  "numCel": 0,
+  "nickname": "",
+  "clave": "",
+  "notificacion": true,
+  "correoUsuario": ""
+  
+  }
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

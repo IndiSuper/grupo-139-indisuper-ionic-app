@@ -3,12 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { EditarPPage} from '../editar-p/editar-p';
 import {InfPerfilPage} from '../inf-perfil/inf-perfil';
 
-/**
- * Generated class for the PerfilPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -17,7 +11,11 @@ import {InfPerfilPage} from '../inf-perfil/inf-perfil';
 })
 export class PerfilPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams
+  ) {
   }
 
   ionViewDidLoad() {
@@ -25,4 +23,7 @@ export class PerfilPage {
   }
   tab1Root = InfPerfilPage;
   tab2Root = EditarPPage;
+
+
+
 }

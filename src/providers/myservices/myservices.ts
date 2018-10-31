@@ -32,6 +32,10 @@ export class MyservicesProvider {
   return this.http.get('http://localhost:3000/api/Eventos');
   }
 
+  getUsuario(){ //Obtener la información del Usuario
+  return this.http.get('http://localhost:3000/api/Usuarios/1');
+  }
+
   //De aqui pa bajo son pruebas (también de arriba ja)... asi que esto no se tiene en cuenta haha
 /*
   //Metodo para traer las subcategorias relacionadas con las Categorias
