@@ -23,29 +23,45 @@ export class HomePage {
     public navParams: NavParams,
     public rest: MyservicesProvider
   ) {
-
-
   }
 
-  listSubcategoriaEventos: any; //array almacenar los id_subcategorias que pertenecen a EVENTOS
-  listSubcategoriaCursos: any; //array almacenar los id_subcategorias que pertenecen a CURSOS
+  listSubcategoriaEventos: any;
+  listSubcategoriaCursos: any;
+  listSubcategorias: any;
 
-  listSubcategorias: any; //Array que almacena las subcategias depende si es Eventos o Cursos
+  listSubCategoria: any;  //array que almacena las subcategorias  *MIENTRAS TANTO*
 
-  getSubcategoriaEventos(){   //metodo para traer las SubCategorias que pertenecen a EVENTOS
-    this.rest.getSubcategoriaEventos().subscribe((respuesta) =>{
+
+  //METODOS PARA LLAMAR LAS CATEGORIAS PERO QUEDA EN VEREMOS POR AHORA
+  getSubcategoriaEventos(){
+    this.rest.getSubcategoriaEventos().subscribe((respuesta) => {
       this.listSubcategoriaEventos = respuesta;
     });
   }
 
-  getSubcategoriaCursos(){   //metodo para traer las SubCategorias que pertenecen a CURSOS
+  getSubcategoriaCursos(){
     this.rest.getSubcategoriaCursos().subscribe((respuesta) =>{
       this.listSubcategoriaCursos = respuesta;
     });
   }
 
-  getSubcategoria(){
 
+  //ESTA ES LA FUNCIONA POR AHORA MIENTRA APRENDEMOS A FILTRAR  *MIENTRAS TANTO*
+
+  getSubcategorias(){
+    this.rest.getSubcategorias().subscribe((respuesta) =>{
+      this.listSubCategoria = respuesta;
+    });
+    this.navCtrl.push(CategoriaPage,{'subcateg' : this.listSubCategoria});
+  }
+
+  //se cargan los curgos directamente, mientras que cargamos lo de las categorias haha :(
+  goCursos():void{
+    this.navCtrl.push(CursosPage);
+  }
+
+  goCapacitaciones():void{
+    this.navCtrl.push(CapacitacionesPage);
   }
 
 /*
@@ -55,15 +71,7 @@ export class HomePage {
     });
     this.navCtrl.push(CategoriaPage,{'subcateg' : this.listSubCategoria}); //Voy a las subcategorias de EVENTOS
   }
-  */
-  listSubCategoria: any;  //array que almacena las subcategorias
 
-  getSubcategorias(){   //metodo para traer las SubCategorias
-    this.rest.getSubcategorias().subscribe((respuesta) =>{
-      this.listSubCategoria = respuesta;
-    });
-    this.navCtrl.push(CategoriaPage,{'subcateg' : this.listSubCategoria});
-  }
 
 
   listCategoria: any;
@@ -112,14 +120,10 @@ export class HomePage {
     //this.navCtrl.push(CategoriaPage,this.subcateg);
   }
 
-
-  goCapacitaciones():void{
-    this.navCtrl.push(CapacitacionesPage);
-  }
   goEventos():void{
     this.navCtrl.push(EventosPage);
   }
-
+*/
 
 
 //   initializeItems() {

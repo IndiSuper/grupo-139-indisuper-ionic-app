@@ -17,43 +17,53 @@
 
 
   <ion-content style="margin-top: 56px;">
+
+<!--INTENTO PARA LLAMAR EVENTOS-->
+  <ion-card *ngFor="let event of listEventos">
+    <ion-item>
+      <ion-card-title>
+          <ion-icon name='calendar' class="iconocuev"></ion-icon>{{event.nombreEvento}}
+      </ion-card-title>
+      <p><b class="evendartos" >Fecha:</b> {{event.fechaEvento}}</p>
+      <p><b class="evendartos" >Lugar:</b> {{event.lugarEvento}}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p><b>Descripción:</b>{{event.descripEvento}}</p>
+    </ion-card-content>
+
+    <img src="assets/img/{{event.fotoEvento}}" >
+
+    <ion-row>
+      <ion-col center text-right>
+        <ion-note style="color:#424242!important;">
+          <b>invita:</b> {{event.ofreceEvento}} <b>Publicado:</b> {{event.fechaCreacion}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+    <ion-row no-padding>
+      <ion-col col-12 text-right>
+        <ion-col text-right>
+          <button ion-button clear small color="favorito" icon-start>
+            <ion-icon name='heart'></ion-icon>
+            Me gusta
+          </button>
+          <button ion-button clear small color="favorito" icon-start>
+            <ion-icon name='share-alt'></ion-icon>
+            Compartir
+          </button>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-card>
+
+
+
     <!-- para eventos -->
-    <ion-card>
-      <ion-item>
-        <ion-card-title>
-            <ion-icon name='calendar' class="iconocuev"></ion-icon>Concierto Opera Clasica
-        </ion-card-title>
-        <p><b class="evendartos" >Fecha:</b> 25-08-2018</p>
-        <p><b class="evendartos" >Hora:</b> 07:25:00</p>
-        <p><b class="evendartos" >Dirección:</b> Teatro principal cll 25 # 35A -20</p>
-        <p><b class="evendartos" >Información:</b> 318 4458 448</p>
-      </ion-item>
-      <ion-card-content>
-        <p><b>Descripción:</b> out of a DeLorean?! Whoa. This is heavy.</p>
-      </ion-card-content>
-      <img src="assets/img/opera.jpg">
-      <ion-row>
-        <ion-col center text-right>
-          <ion-note style="color:#424242!important;">
-            <b>invita:</b> Ministerio de cultura <b>Publicado:</b> 11-05-2018
-          </ion-note>
-        </ion-col>
-      </ion-row>
-      <ion-row no-padding>
-        <ion-col col-12 text-right>
-          <ion-col text-right>
-            <button ion-button clear small color="favorito" icon-start>
-              <ion-icon name='heart'></ion-icon>
-              Me gusta
-            </button>
-            <button ion-button clear small color="favorito" icon-start>
-              <ion-icon name='share-alt'></ion-icon>
-              Compartir
-            </button>
-          </ion-col>
-        </ion-col>
-      </ion-row>
-    </ion-card>
+  <!--  EVENTOS CON VIDEO
     <ion-card>
       <ion-item>
         <ion-card-title>
@@ -93,9 +103,10 @@
       </ion-row>
     </ion-card>
 
-      <br><br><br>
-  </ion-content>
 
+  -->
+<br><br><br>
+</ion-content>
 
 <!-- Pie de página -->
 <ion-footer>
