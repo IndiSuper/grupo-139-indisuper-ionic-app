@@ -12,75 +12,77 @@
   </ion-navbar>
 </ion-header><br>
 <img class="logoindi" src="assets/img/indisuper.png"/>
-<ion-header style="margin-top: 56px;">       
+<ion-header style="margin-top: 56px;">
 </ion-header>
 
 
 <ion-content padding>
   <ion-list>
       <ion-col class="rayaform">
-        <ion-item>      
+        <ion-item>
         <ion-icon style="top: -10px" name="contact" item-start></ion-icon>
       <ion-label stacked>Nombres:</ion-label>
-      <ion-input  type="text" placeholder="Indisuper" required></ion-input>
-    </ion-item>  
+      <ion-input  type="text" placeholder="Indisuper" [(ngModel)]="postData.nombreUsuario"  required></ion-input>
+    </ion-item>
     <ion-item style="margin-left:56px">
       <ion-label  stacked>Apellidos:</ion-label>
-      <ion-input  type="text" placeholder="Fedesoft" required></ion-input>
-    </ion-item>  
+      <ion-input  type="text" placeholder="Fedesoft"  [(ngModel)]="postData.apellidoUsuario"  required></ion-input>
+    </ion-item>
       <ion-item>
           <ion-icon name="finger-print" item-left></ion-icon>
           <ion-label stacked>Numero de Documento:</ion-label>
-          <ion-input type="text" placeholder="00000000" required></ion-input>
-        </ion-item>   
+          <ion-input type="text" placeholder="00000000"  [(ngModel)]="postData.numIdentificacion" required></ion-input>
+        </ion-item>
         <ion-item >
             <ion-icon style="top: -10px" name="calendar" item-start></ion-icon>
             <ion-label  stacked>Fecha de nacimiento:</ion-label>
-            <ion-datetime displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY" required></ion-datetime>       
+          <!--  <ion-datetime displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY" required></ion-datetime> -->
+          <ion-input type="text" placeholder="YYYY-MM-DD"  [(ngModel)]="postData.fechaNac" required></ion-input>
         </ion-item>
         <ion-item style="margin-left:56px">
           <ion-label  stacked>Fecha de Expedicion:</ion-label>
-          <ion-datetime  displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY" required></ion-datetime>
-        </ion-item> 
-          
+          <!-- <ion-datetime  displayFormat="MM-DD-YYYY" placeholder="MM-DD-YYY" required></ion-datetime> -->
+          <ion-input type="text" placeholder="YYYY-MM-DD"  [(ngModel)]="postData.fechaExpc" required></ion-input>
+        </ion-item>
+
     <ion-item>
       <ion-icon name="at" item-start></ion-icon>
       <ion-label stacked>Correo electronico:</ion-label>
-      <ion-input type="email" placeholder="example@indisuper.com" required></ion-input>
-    </ion-item>   
-  </ion-col>       
+      <ion-input type="email" placeholder="example@indisuper.com" [(ngModel)]="postData.correoUsuario" required></ion-input>
+    </ion-item>
+  </ion-col>
       <ion-item>
-    <ion-label stacked>Genero:</ion-label> 
-  </ion-item>      
+    <ion-label stacked>Genero:</ion-label>
+  </ion-item>
     <ion-row radio-group>
       <ion-col class="rayaform">
         <ion-item>
           <ion-icon name="woman" item-start></ion-icon>
           <ion-label >Femenino</ion-label>
-          <ion-radio value="2"></ion-radio>          
-        </ion-item>          
-        <ion-item>  
+          <ion-radio value="2"></ion-radio>
+        </ion-item>
+        <ion-item>
             <ion-icon name="man" item-start></ion-icon>
             <ion-label stacked>Masculino</ion-label>
-            <ion-radio value="1"></ion-radio>       
-        </ion-item>  
+            <ion-radio value="1"></ion-radio>
+        </ion-item>
       </ion-col>
       <ion-col >
           <ion-item>
               <ion-icon name="call" item-start></ion-icon>
               <ion-label stacked>Telefono Fijo:</ion-label>
-              <ion-input type="text" placeholder="123-456-78"></ion-input>
-            </ion-item>           
+              <ion-input type="text" placeholder="12345678"></ion-input>
+            </ion-item>
            <ion-item>
               <ion-icon name="phone-portrait" item-start></ion-icon>
               <ion-label stacked>Numero Celular:</ion-label>
-              <ion-input type="text" placeholder="310-1234567" ></ion-input>
-            </ion-item>           
+              <ion-input type="text" [(ngModel)]="postData.numCel" required></ion-input>
+            </ion-item>
       </ion-col>
       <ion-item>
           <ion-icon name="unlock" item-start></ion-icon>
           <ion-label stacked>Contraseña:</ion-label>
-          <ion-input type="password" placeholder="********" required></ion-input>
+          <ion-input type="password" placeholder="********" [(ngModel)]="postData.clave" required></ion-input>
         </ion-item>
         <ion-item>
           <ion-icon name="unlock" item-start></ion-icon>
@@ -90,7 +92,7 @@
     </ion-row>
   </ion-list>
   <div padding>
-    <button ion-button block type="submit">Registrar</button>
+    <button ion-button block type="submit" (click)="registrarUsuario()">Registrar</button>
   </div>
 </ion-content>
 

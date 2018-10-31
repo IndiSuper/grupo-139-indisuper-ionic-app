@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the RegistroPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+ import { MyservicesProvider } from '../../providers/myservices/myservices';
+
 
 @IonicPage()
 @Component({
@@ -17,27 +13,42 @@ export class RegistroPage {
 
   postData = {
 
-  "fotoUsuario": "",
+  "fotoUsuario": "user.png",
   "numIdentificacion": 0,
   "nombreUsuario": "",
   "apellidoUsuario": "",
   "fechaNac": "",
   "fechaExpc": "",
-  "genero": "",
+  "genero": "M", //TOCA CUADRAR ESTO
   "numCel": 0,
-  "nickname": "",
+  "nickname": "diego",
   "clave": "",
   "notificacion": true,
   "correoUsuario": ""
-  
+
   }
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public rest: MyservicesProvider
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
+  }
+
+
+  registrarUsuario(){
+  this.rest.registrarUsuario(this.postData)
+    .subscribe(data => {
+      console.log(data['_body']);
+      this.navCtrl.setRoot('HomePage');
+    }, error => {
+      console.log(error);
+    });
   }
 
 }
