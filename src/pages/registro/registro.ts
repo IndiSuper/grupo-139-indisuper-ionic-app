@@ -40,7 +40,10 @@ export class RegistroPage {
     console.log('ionViewDidLoad RegistroPage');
   }
 
-
+  registrarUsuario(){
+    console.log('Registrar nuevo usuario');
+  }
+/*
   registrarUsuario(){
   this.rest.registrarUsuario(this.postData)
     .subscribe(data => {
@@ -49,6 +52,6 @@ export class RegistroPage {
     }, error => {
       console.log(error);
     });
-  }
+  }*/
 
 }
