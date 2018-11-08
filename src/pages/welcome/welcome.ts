@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Nav, IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the WelcomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+
+import { RegistroPage } from '../registro/registro';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -15,11 +13,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class WelcomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage');
+  }
+
+
+  iniciarSesion() {
+    console.log('ionViewDidLoad HomePage');
+    this.navCtrl.setRoot(HomePage);
+  }
+
+  registro(){
+    console.log('ionViewDidLoad RegistroPage');
+    this.navCtrl.push(RegistroPage);
   }
 
 }
