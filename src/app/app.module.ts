@@ -1,10 +1,12 @@
 import { Pro } from '@ionic/pro';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule, Injectable, Injector } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule ,ModalController } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, ModalController } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+
+//import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+
 import { CategoriaPage } from '../pages/categoria/categoria';
 import { CategoriaPageModule } from '../pages/categoria/categoria.module';
 import { CursosPageModule } from '../pages/cursos/cursos.module';
@@ -18,12 +20,12 @@ import { CusrorealPageModule } from '../pages/cusroreal/cusroreal.module';
 import { ModaleventocapaPageModule} from '../pages/modaleventocapa/modaleventocapa.module';
 import { QrasistenciaPageModule} from '../pages/qrasistencia/qrasistencia.module';
 import { DestacadosPageModule} from '../pages/destacados/destacados.module';
-
 import { ContactenosPageModule } from '../pages/contactenos/contactenos.module';
 import { HorarioPageModule } from '../pages/horario/horario.module';
 import { RegistroPageModule } from '../pages/registro/registro.module';
 import { PerfilPageModule } from '../pages/perfil/perfil.module';
-
+import { WelcomePageModule } from '../pages/welcome/welcome.module';
+import { HomePageModule } from '../pages/home/home.module';
 import { InfPerfilPageModule } from '../pages/inf-perfil/inf-perfil.module';
 import { EditarPPageModule } from '../pages/editar-p/editar-p.module';
 
@@ -70,13 +72,15 @@ export class MyErrorHandler implements ErrorHandler {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    //HomePage,
     ListPage
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    WelcomePageModule,
+    HomePageModule,
     CategoriaPageModule,
     CursosPageModule,
     CapacitacionesPageModule,
@@ -89,7 +93,7 @@ export class MyErrorHandler implements ErrorHandler {
     ModaleventocapaPageModule,
     QrasistenciaPageModule,
     DestacadosPageModule,
-    HttpClientModule,  //modulo importado para consumor api
+    HttpClientModule,  //modulo importado para consumir api
     ContactenosPageModule,
     HorarioPageModule,
     RegistroPageModule,
@@ -100,7 +104,7 @@ export class MyErrorHandler implements ErrorHandler {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    //HomePage,
     ListPage
 
   ],
@@ -112,8 +116,8 @@ export class MyErrorHandler implements ErrorHandler {
     File,
     QRScanner,
     AndroidPermissions,
-    MyservicesProvider,  //proveor de api
-    HttpClient   //provedor para api
+    MyservicesProvider,  //proveedor de api
+    HttpClient   //proveedor para api
   ]
 })
 export class AppModule {}

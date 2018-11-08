@@ -36,9 +36,9 @@ export class MyservicesProvider {
   return this.http.get('http://localhost:3000/api/Usuarios/1');
   }
 
-  registrarUsuario(postData): Observable<any>{
-    return this.http.post('http://localhost:3000/api/Usuarios', postData);
-  }
+  //registrarUsuario(postData): {
+  //  return this.http.post('http://localhost:3000/api/Usuarios', postData);
+  //}
 
   //De aqui pa bajo son pruebas (también de arriba ja)... asi que esto no se tiene en cuenta haha
 /*
