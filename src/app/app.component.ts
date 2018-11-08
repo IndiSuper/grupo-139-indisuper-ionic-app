@@ -3,6 +3,8 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { WelcomePage } from '../pages/welcome/welcome';
 import { HomePage } from '../pages/home/home';
 import { ModalController } from 'ionic-angular';
 import { ListPage } from '../pages/list/list';
@@ -14,6 +16,7 @@ import { ContactenosPage } from '../pages/contactenos/contactenos';
 import { HorarioPage } from '../pages/horario/horario';
 import { RegistroPage } from '../pages/registro/registro';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -24,11 +27,15 @@ import { PerfilPage } from '../pages/perfil/perfil';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = WelcomePage;
 
   pages: Array<{name: string ,title: string, component: any }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen
+  ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
