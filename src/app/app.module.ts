@@ -1,4 +1,3 @@
-import { Pro } from '@ionic/pro';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule, Injectable, Injector } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, ModalController } from 'ionic-angular';
@@ -17,9 +16,9 @@ import { RequisitosPageModule } from '../pages/requisitos/requisitos.module';
 import { MconfimacionaPageModule } from '../pages/mconfimaciona/mconfimaciona.module';
 import { MiscursosPageModule } from '../pages/miscursos/miscursos.module';
 import { CusrorealPageModule } from '../pages/cusroreal/cusroreal.module';
-import { ModaleventocapaPageModule} from '../pages/modaleventocapa/modaleventocapa.module';
-import { QrasistenciaPageModule} from '../pages/qrasistencia/qrasistencia.module';
-import { DestacadosPageModule} from '../pages/destacados/destacados.module';
+import { ModaleventocapaPageModule } from '../pages/modaleventocapa/modaleventocapa.module';
+import { QrasistenciaPageModule } from '../pages/qrasistencia/qrasistencia.module';
+import { DestacadosPageModule } from '../pages/destacados/destacados.module';
 import { ContactenosPageModule } from '../pages/contactenos/contactenos.module';
 import { HorarioPageModule } from '../pages/horario/horario.module';
 import { RegistroPageModule } from '../pages/registro/registro.module';
@@ -43,10 +42,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyservicesProvider } from '../providers/myservices/myservices';
 
-Pro.init('4b3a73a3', {
-  appVersion: '1.0'
-})
-
 @Injectable()
 export class MyErrorHandler implements ErrorHandler {
   ionicErrorHandler: IonicErrorHandler;
@@ -54,14 +49,14 @@ export class MyErrorHandler implements ErrorHandler {
   constructor(injector: Injector) {
     try {
       this.ionicErrorHandler = injector.get(IonicErrorHandler);
-    } catch(e) {
+    } catch (e) {
       // Unable to get the IonicErrorHandler provider, ensure
       // IonicErrorHandler has been added to the providers list below
     }
   }
 
   handleError(err: any): void {
-    Pro.monitoring.handleNewError(err);
+
     // Remove this if you want to disable Ionic's auto exception handling
     // in development mode.
     this.ionicErrorHandler && this.ionicErrorHandler.handleError(err);
@@ -111,7 +106,7 @@ export class MyErrorHandler implements ErrorHandler {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     FileTransfer,
     File,
     QRScanner,
@@ -120,4 +115,4 @@ export class MyErrorHandler implements ErrorHandler {
     HttpClient   //proveedor para api
   ]
 })
-export class AppModule {}
+export class AppModule { }
