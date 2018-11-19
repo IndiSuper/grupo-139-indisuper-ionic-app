@@ -7,19 +7,17 @@
 <ion-list>
   <ion-item>
     <ion-label floating>Usuario</ion-label>
-    <!-- <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>-->
-    <ion-input type="text"></ion-input>
+     <ion-input type="text" [(ngModel)]="autentificar.nombreUsuario" name="username" required></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Contraseña</ion-label>
-    <!-- <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input> -->
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="autentificar.clave" name="password" required></ion-input>
   </ion-item>
 </ion-list>
 </form>
 
-    <button ion-button block (click)="iniciarSesion()">Iniciar Sesión</button>
+    <button ion-button block (click)="inicioSesion()">Iniciar Sesión</button>
     <button ion-button clear (click)="registro()">Registrarse</button>
 
 
