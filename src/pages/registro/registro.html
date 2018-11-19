@@ -12,8 +12,9 @@
   </ion-navbar>
 </ion-header><br>
 <img class="logoindi" src="assets/img/indisuper.png"/>
-<ion-header style="margin-top: 56px;">
-</ion-header>
+
+<!--<ion-header style="margin-top: 56px;">
+</ion-header> -->
 
 
 <ion-content padding>
@@ -70,10 +71,12 @@
             <ion-label stacked>Masculino</ion-label>
             <ion-radio value="1"></ion-radio>
         </ion-item>
+
       </ion-col>
       <ion-col >
           <ion-item>
               <ion-icon name="call" item-start></ion-icon>
+
               <ion-label stacked>Telefono Fijo (opcional):</ion-label>
               <ion-input type="text" [(ngModel)]="postData.numFijo"></ion-input>
             </ion-item>
@@ -117,4 +120,5 @@
       </ion-row>
     </ion-grid>
   </ion-toolbar>
+
 </ion-footer>
