@@ -20,12 +20,13 @@ export class InfPerfilPage {
   }
 
   infoPerfil: any;
-
+/*
   getUsuario(){
     this.rest.getUsuario().subscribe((respuesta) => {
       this.infoPerfil = respuesta;
     });
   }
+*/
 
 
 
