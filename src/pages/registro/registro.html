@@ -22,16 +22,20 @@
         <ion-item>
         <ion-icon style="top: -10px" name="contact" item-start></ion-icon>
       <ion-label stacked>Nombres:</ion-label>
-      <ion-input  type="text" placeholder="Indisuper" [(ngModel)]="postData.nombreUsuario"  required></ion-input>
+      <ion-input  type="text" [(ngModel)]="postData.nombreUsuario"  required></ion-input>
     </ion-item>
     <ion-item style="margin-left:56px">
       <ion-label  stacked>Apellidos:</ion-label>
-      <ion-input  type="text" placeholder="Fedesoft"  [(ngModel)]="postData.apellidoUsuario"  required></ion-input>
+      <ion-input  type="text" [(ngModel)]="postData.apellidoUsuario"  required></ion-input>
+    </ion-item>
+    <ion-item style="margin-left:56px">
+      <ion-label  stacked>Nombre de Usuario</ion-label>
+      <ion-input  type="text" [(ngModel)]="postData.nickname"  required></ion-input>
     </ion-item>
       <ion-item>
           <ion-icon name="finger-print" item-left></ion-icon>
           <ion-label stacked>Numero de Documento:</ion-label>
-          <ion-input type="text" placeholder="00000000"  [(ngModel)]="postData.numIdentificacion" required></ion-input>
+          <ion-input type="text" [(ngModel)]="postData.numIdentificacion" required></ion-input>
         </ion-item>
         <ion-item >
             <ion-icon style="top: -10px" name="calendar" item-start></ion-icon>
@@ -70,8 +74,8 @@
       <ion-col >
           <ion-item>
               <ion-icon name="call" item-start></ion-icon>
-              <ion-label stacked>Telefono Fijo:</ion-label>
-              <ion-input type="text" placeholder="12345678"></ion-input>
+              <ion-label stacked>Telefono Fijo (opcional):</ion-label>
+              <ion-input type="text" [(ngModel)]="postData.numFijo"></ion-input>
             </ion-item>
            <ion-item>
               <ion-icon name="phone-portrait" item-start></ion-icon>
@@ -84,11 +88,11 @@
           <ion-label stacked>Contraseña:</ion-label>
           <ion-input type="password" placeholder="********" [(ngModel)]="postData.clave" required></ion-input>
         </ion-item>
-        <ion-item>
+        <!--<ion-item>
           <ion-icon name="unlock" item-start></ion-icon>
           <ion-label stacked>Confirmar contraseña:</ion-label>
           <ion-input type="password" placeholder="********" required></ion-input>
-        </ion-item>
+        </ion-item>-->
     </ion-row>
   </ion-list>
   <div padding>

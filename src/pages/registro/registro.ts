@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
  import { MyservicesProvider } from '../../providers/myservices/myservices';
 
@@ -20,8 +21,9 @@ export class RegistroPage {
   "fechaNac": "",
   "fechaExpc": "",
   "genero": "M", //TOCA CUADRAR ESTO
+  "numFijo": 0,
   "numCel": 0,
-  "nickname": "diego",
+  "nickname": "",
   "clave": "",
   "notificacion": true,
   "correoUsuario": ""
@@ -32,7 +34,8 @@ export class RegistroPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public rest: MyservicesProvider
+    public rest: MyservicesProvider,
+    public toastCtrl: ToastController
   ) {
   }
 
@@ -41,17 +44,20 @@ export class RegistroPage {
   }
 
   registrarUsuario(){
-    console.log('Registrar nuevo usuario');
-  }
-/*
-  registrarUsuario(){
   this.rest.registrarUsuario(this.postData)
     .subscribe(data => {
       console.log(data['_body']);
-      this.navCtrl.setRoot('HomePage');
+      this.navCtrl.setRoot('WelcomePage');
+      //genera la notificación de exito
+      const toast = this.toastCtrl.create({
+      message: '¡Registrado! Ya puedes ingresar con tus datos',
+      duration: 6000
+      });
+      toast.present();
+      //
     }, error => {
       console.log(error);
     });
-  }*/
+  }
 
 }
