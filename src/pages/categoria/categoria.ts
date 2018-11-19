@@ -3,10 +3,8 @@ import { App } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Nav,IonicPage, NavController, NavParams,Platform } from 'ionic-angular';
-
 import { CursosPage } from '../cursos/cursos';
 import { EventosPage } from '../eventos/eventos';
-
 import { MyservicesProvider } from '../../providers/myservices/myservices'
 
 @IonicPage()
